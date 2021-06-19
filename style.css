@@ -1,0 +1,198 @@
+*,
+*::after,
+*::before,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #24245c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: #ebf3fb;
+}
+
+.selected-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.form-container {
+  flex: none;
+}
+
+.form-container.off {
+  flex: 1;
+}
+
+.form-container,
+.employees-list-container {
+  width: 500px;
+  background-color: #fff;
+  color: #24245c;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transition: all 0.6s;
+}
+
+.form-container .form-header,
+.employees-list-header {
+  background-color: #24245c;
+  color: #fff;
+  padding: 60px 50px;
+}
+
+.form-container .form-header h1,
+.employees-list-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-container form {
+  width: 400px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px 10px 50px;
+  margin: 0 auto;
+}
+
+.form-container form label {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.form-container form input,
+.form-container form select {
+  padding: 10px 1px;
+  border: none;
+  border-bottom: 1px solid #9798af;
+}
+
+.form-container form input:focus,
+.form-container form select:focus {
+  outline: none;
+}
+
+.form-container .form-btn {
+  width: fit-content;
+  background-color: #24245c;
+  color: #fff;
+  border-radius: 30px;
+  border: none;
+  padding: 15px 25px;
+  margin: 0 auto;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  cursor: pointer;
+}
+
+.employees-list-container {
+  flex: none;
+}
+
+.employees-list-container.off {
+  flex: 1;
+}
+
+.employees-list {
+  height: 436px;
+  width: 400px;
+  margin: 0 auto;
+  padding-top: 20px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.switch-btn-container {
+  text-align: center;
+}
+
+.show-form-btn,
+.show-list-btn {
+  border: none;
+  border-bottom: 1px solid rgb(119, 136, 153);
+  color: rgb(119, 136, 153);
+  background-color: transparent;
+  padding-bottom: 5px;
+  margin: 30px 0;
+  cursor: pointer;
+}
+
+.employee {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.removeEmployee {
+  background-color: transparent;
+  border: none;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.removeEmployee span {
+  width: 80%;
+  margin: 0 auto;
+  height: 2px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  transform: translate3d(-50%, -50%, 0);
+  transform: rotate(-45deg);
+  transition: 0.2s;
+}
+
+.removeEmployee span::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: black;
+  position: absolute;
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+
+.removeEmployee:hover > span,
+.removeEmployee:hover > span::before {
+  background-color: red;
+  transition: 0.2s;
+}

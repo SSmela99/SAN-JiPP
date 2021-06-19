@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Języki i paradygmaty programowania</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="selected-container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1>Dodawanie pracownika</h1>
+                </div>
+                <form>
+                    <label>Imię:</label>
+                    <input type="text" placeholder="imię" data-input="name" required>
+                    <label>Nazwisko:</label>
+                    <input type="text" placeholder="nazwisko" data-input="lastname" required>
+                    <label>Data urodzenia:</label>
+                    <input type="date" value="2021-06-26" min="1900-01-01" max="2021-06-26" data-input="date">
+                    <label for="gender-select">Płeć:</label>
+
+                    <select name="gender" id="gender-select" required data-input="gender">
+                        <option value="" disabled selected>Podaj swoją płeć:</option>
+                        <option value="women">Kobieta</option>
+                        <option value="men">Mężczyzna</option>
+                        <option value="other">Inna</option>
+                    </select>
+                    <button class="form-btn" type="submit">Dodaj pracownika</button>
+                </form>
+                <div class="switch-btn-container">
+                    <button class="show-list-btn">pokaż pracowników</button>
+                </div>
+            </div>
+            <div class="employees-list-container off">
+                <div class="employees-list-header">
+                    <h1>Lista pracowników</h1>
+                </div>
+                <div class="employees-list">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="switch-btn-container">
+                    <button class="show-form-btn">pokaż formularz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
